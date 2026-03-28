@@ -1965,4 +1965,8 @@
     <string name="click">Klik</string>
     <string name="to_use_this_instead">aby użyć tego zamiast?</string>
     <string name="the_transmitter_id_you_have_entered_is_incorrect">Wprowadzony przez Ciebie identyfikator nadajnika lub kod parowania jest nieprawidłowy i nie będzie działał.\n\nSprawdź wprowadzone wartości i spróbuj ponownie.</string>
+    <string name="title_smooth_delta_by_regression">Wygładź deltę regresją liniową</string>
+    <string name="summary_smooth_delta_by_regression">Zmniejsza skoki delty dopasowując prostą do ostatnich odczytów zamiast używać tylko dwóch ostatnich</string>
+    <string name="title_smooth_delta_regression_window">Rozmiar okna regresji</string>
+    <string name="summary_smooth_delta_regression_window">Liczba minut odczytów używanych do obliczenia wygładzonej delty</string>
 </resources>

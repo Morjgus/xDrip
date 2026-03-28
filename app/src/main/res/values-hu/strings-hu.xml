@@ -1928,4 +1928,8 @@
     <string name="click">Kattints</string>
     <string name="to_use_this_instead">inkább ezt használja?</string>
     <string name="the_transmitter_id_you_have_entered_is_incorrect">A megadott transzmitter azonosító vagy párosítási kód helytelen, ezért nem fog működni.\n\nKérjük, ellenőrizze újra az adatokat, majd próbálja meg újra.</string>
+    <string name="title_smooth_delta_by_regression">Delta simítása lineáris regresszióval</string>
+    <string name="summary_smooth_delta_by_regression">Csökkenti a delta ingadozásait az utóbbi mérésekre illesztett egyenes segítségével, ahelyett hogy csak az utolsó kettőt használná</string>
+    <string name="title_smooth_delta_regression_window">Regressziós ablak mérete</string>
+    <string name="summary_smooth_delta_regression_window">Az egyenletesített delta kiszámításához felhasznált mérések percben mért hossza</string>
 </resources>

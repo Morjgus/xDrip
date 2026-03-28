@@ -24,4 +24,8 @@
     <string name="title_clfollow_lang">CareLink Language</string>
     <string name="summary_clfollow_lang">CareLink language code</string>
     -->
+    <string name="title_smooth_delta_by_regression">Zgladite delto z linearno regresijo</string>
+    <string name="summary_smooth_delta_by_regression">Zmanjša skoke delte s prilagajanjem premice zadnjim meritvam namesto uporabe samo zadnjih dveh</string>
+    <string name="title_smooth_delta_regression_window">Velikost regresijskega okna</string>
+    <string name="summary_smooth_delta_regression_window">Število minut meritev, ki se uporablja za izračun zglajenega delte</string>
 </resources>

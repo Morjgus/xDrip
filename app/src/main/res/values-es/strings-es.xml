@@ -2050,4 +2050,8 @@
     <string name="click">Clic</string>
     <string name="to_use_this_instead">¿Usar esto en su lugar?</string>
     <string name="the_transmitter_id_you_have_entered_is_incorrect">El ID del transmisor o el código de emparejamiento que ha introducido es incorrecto y no funcionaría.\n\nCompruebe los detalles e inténtelo de nuevo.</string>
+    <string name="title_smooth_delta_by_regression">Suavizar delta usando regresión lineal</string>
+    <string name="summary_smooth_delta_by_regression">Reduce la variabilidad del delta ajustando una línea a las lecturas recientes en lugar de usar solo las dos últimas</string>
+    <string name="title_smooth_delta_regression_window">Tamaño de ventana de regresión</string>
+    <string name="summary_smooth_delta_regression_window">Número de minutos de lecturas utilizados para calcular el delta suavizado</string>
 </resources>
