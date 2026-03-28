@@ -2019,6 +2019,7 @@
     <string name="glupro_reconnect_attempt">Спроба повторного підключення</string>
     <string name="glupro_reading_frequency">Частота зчитування</string>
     <string name="need_bluetooth_permission">Потрібен дозвіл Bluetooth</string>
+    <string name="title_smooth_delta_settings">Smooth delta settings</string>
     <string name="title_smooth_delta_by_regression">Згладжування дельти лінійною регресією</string>
     <string name="summary_smooth_delta_by_regression">Зменшує стрибки дельти шляхом підгонки прямої до останніх вимірів замість використання лише двох останніх</string>
     <string name="title_smooth_delta_regression_window">Розмір вікна регресії</string>

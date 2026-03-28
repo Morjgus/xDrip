@@ -1031,6 +1031,7 @@
     <string name="a_new_version_on_channel_1_s_is_available">%1$s 版の最新版が利用可能</string>
     <string name="glupro_disconnected">切断済み</string>
     <string name="glupro_connected">接続済み</string>
+    <string name="title_smooth_delta_settings">Smooth delta settings</string>
     <string name="title_smooth_delta_by_regression">線形回帰でデルタを平滑化</string>
     <string name="summary_smooth_delta_by_regression">最後の2つだけを使用する代わりに、最近の読み取りに直線を当てはめることでデルタの急変を減らす</string>
     <string name="title_smooth_delta_regression_window">回帰ウィンドウサイズ</string>

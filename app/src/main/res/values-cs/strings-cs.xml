@@ -2009,6 +2009,7 @@ môže spôsobovať pády alebo zamrznutia telefónu! Klepnutím otestujte predt
     <string name="glupro_reconnect_attempt">Pokus o opětovné připojení</string>
     <string name="glupro_reading_frequency">Frekvence hodnot glykémií</string>
     <string name="need_bluetooth_permission">Je potřeba oprávnění pro Bluetooth</string>
+    <string name="title_smooth_delta_settings">Smooth delta settings</string>
     <string name="title_smooth_delta_by_regression">Vyhlazení delty lineární regresí</string>
     <string name="summary_smooth_delta_by_regression">Snižuje skoky delty přizpůsobením přímky nedávným odečtům namísto použití pouze posledních dvou</string>
     <string name="title_smooth_delta_regression_window">Velikost okna regrese</string>

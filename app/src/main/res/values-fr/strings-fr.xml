@@ -1962,6 +1962,7 @@
     <string name="error_with_value">Erreur de la valeur</string>
     <string name="glupro_disconnected">Déconnecté</string>
     <string name="glupro_connected">Connecté</string>
+    <string name="title_smooth_delta_settings">Smooth delta settings</string>
     <string name="title_smooth_delta_by_regression">Lisser le delta par régression linéaire</string>
     <string name="summary_smooth_delta_by_regression">Réduit les variations du delta en ajustant une droite aux lectures récentes plutôt qu\'en utilisant seulement les deux dernières</string>
     <string name="title_smooth_delta_regression_window">Taille de la fenêtre de régression</string>

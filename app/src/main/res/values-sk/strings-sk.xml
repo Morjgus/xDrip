@@ -1311,6 +1311,7 @@ Je nutné zakázať v prípade, že chcete používať xdrip cifreník. (Požado
     <string name="volume_profile_high">Vysoká glykémia</string>
     <string name="glupro_disconnected">Odpojené</string>
     <string name="glupro_connected">Pripojené</string>
+    <string name="title_smooth_delta_settings">Smooth delta settings</string>
     <string name="title_smooth_delta_by_regression">Vyhladzovanie delty lineárnou regresiou</string>
     <string name="summary_smooth_delta_by_regression">Znižuje skoky delty prispôsobením priamky nedávnym meraniam namiesto použitia iba posledných dvoch</string>
     <string name="title_smooth_delta_regression_window">Veľkosť regresného okna</string>

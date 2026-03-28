@@ -1882,6 +1882,7 @@
     <string name="glupro_disconnected">Frånkopplad</string>
     <string name="glupro_connected">Ansluten</string>
     <string name="need_bluetooth_permission">Behöver bluetooth-behörighet</string>
+    <string name="title_smooth_delta_settings">Smooth delta settings</string>
     <string name="title_smooth_delta_by_regression">Jämna ut delta med linjär regression</string>
     <string name="summary_smooth_delta_by_regression">Minskar deltahopp genom att anpassa en linje till de senaste mätningarna istället för att bara använda de två senaste</string>
     <string name="title_smooth_delta_regression_window">Regressionsfönsterstorlek</string>

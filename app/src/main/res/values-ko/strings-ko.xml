@@ -2013,6 +2013,7 @@
     <string name="glupro_reconnect_attempt">재연결 시도</string>
     <string name="glupro_reading_frequency">측정 주기</string>
     <string name="need_bluetooth_permission">블루투스 권한 필요</string>
+    <string name="title_smooth_delta_settings">Smooth delta settings</string>
     <string name="title_smooth_delta_by_regression">선형 회귀를 사용하여 델타 평활화</string>
     <string name="summary_smooth_delta_by_regression">마지막 두 값만 사용하는 대신 최근 측정값에 선을 맞추어 델타의 급격한 변화를 줄입니다</string>
     <string name="title_smooth_delta_regression_window">회귀 창 크기</string>
