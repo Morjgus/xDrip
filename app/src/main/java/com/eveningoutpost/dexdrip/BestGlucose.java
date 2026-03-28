@@ -237,19 +237,37 @@ public class BestGlucose {
 
         } else {
             // TODO ignores plugin
-            //dg.unitized_delta = BgGraphBuilder.unitizedDeltaString(true, true, is_follower , doMgdl);
-            dg.unitized_delta_no_units = unitizedDeltaString(false, true, doMgdl, estimate, timestamp, previous_estimate, previous_timestamp);
-            estimated_delta = estimate - previous_estimate; // TODO time stretch adjustment?
-            // TODO optimize adding units
-            dg.unitized_delta = unitizedDeltaString(true, true, doMgdl, estimate, timestamp, previous_estimate, previous_timestamp);
-            long time_delta = timestamp - previous_timestamp;
-            if (time_delta < 0) Log.wtf(TAG, "Time delta is negative! : " + time_delta);
-            //slope_arrow = lastBgReading.slopeArrow(); // internalize this for plugins
-            double slope = calculateSlope(estimate, timestamp, previous_estimate, previous_timestamp);
-            dg.slope = slope;
-            slope_arrow = BgReading.slopeToArrowSymbol(slope * 60000); // slope by minute
-            slope_name = BgReading.slopeName(slope * 60000);
-            Log.d(TAG, "No noise option slope by minute: " + JoH.qs(slope * 60000, 5));
+            if (Pref.getBoolean("smooth_delta_by_regression", false)) {
+                final long windowMs = Pref.getStringToInt("smooth_delta_regression_window_minutes", 10) * 60 * 1000L;
+                final double regSlope;
+                if (Pref.getBoolean("smooth_delta_use_exponential_decay", false)) {
+                    final double lambda = Pref.getStringToDouble("smooth_delta_decay_factor", 0.8);
+                    regSlope = BgReading.currentSlopeByWeightedRegression(windowMs, lambda, is_follower);
+                } else {
+                    regSlope = BgReading.currentSlopeByRegression(windowMs, is_follower);
+                }
+                estimated_delta = regSlope * 5 * 60 * 1000;
+                dg.unitized_delta_no_units = BgGraphBuilder.unitizedDeltaStringRaw(false, true, estimated_delta, doMgdl);
+                dg.unitized_delta = BgGraphBuilder.unitizedDeltaStringRaw(true, true, estimated_delta, doMgdl);
+                dg.slope = regSlope;
+                slope_arrow = BgReading.slopeToArrowSymbol(regSlope * 60000); // slope by minute
+                slope_name = BgReading.slopeName(regSlope * 60000);
+                Log.d(TAG, "Regression slope by minute: " + JoH.qs(regSlope * 60000, 5));
+            } else {
+                //dg.unitized_delta = BgGraphBuilder.unitizedDeltaString(true, true, is_follower , doMgdl);
+                dg.unitized_delta_no_units = unitizedDeltaString(false, true, doMgdl, estimate, timestamp, previous_estimate, previous_timestamp);
+                estimated_delta = estimate - previous_estimate; // TODO time stretch adjustment?
+                // TODO optimize adding units
+                dg.unitized_delta = unitizedDeltaString(true, true, doMgdl, estimate, timestamp, previous_estimate, previous_timestamp);
+                long time_delta = timestamp - previous_timestamp;
+                if (time_delta < 0) Log.wtf(TAG, "Time delta is negative! : " + time_delta);
+                //slope_arrow = lastBgReading.slopeArrow(); // internalize this for plugins
+                double slope = calculateSlope(estimate, timestamp, previous_estimate, previous_timestamp);
+                dg.slope = slope;
+                slope_arrow = BgReading.slopeToArrowSymbol(slope * 60000); // slope by minute
+                slope_name = BgReading.slopeName(slope * 60000);
+                Log.d(TAG, "No noise option slope by minute: " + JoH.qs(slope * 60000, 5));
+            }
         }
 
         // TODO bit more work on deltas etc needed here
