@@ -2371,7 +2371,12 @@ public class BgGraphBuilder {
         final double slope;
         if (Pref.getBoolean("smooth_delta_by_regression", false)) {
             final long windowMs = Pref.getStringToInt("smooth_delta_regression_window_minutes", 10) * 60 * 1000L;
-            slope = BgReading.currentSlopeByRegression(windowMs, is_follower);
+            if (Pref.getBoolean("smooth_delta_use_exponential_decay", false)) {
+                final double lambda = Pref.getStringToDouble("smooth_delta_decay_factor", 0.8);
+                slope = BgReading.currentSlopeByWeightedRegression(windowMs, lambda, is_follower);
+            } else {
+                slope = BgReading.currentSlopeByRegression(windowMs, is_follower);
+            }
         } else {
             slope = BgReading.currentSlope(is_follower);
         }

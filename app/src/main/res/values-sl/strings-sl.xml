@@ -28,4 +28,8 @@
     <string name="summary_smooth_delta_by_regression">Zmanjša skoke delte s prilagajanjem premice zadnjim meritvam namesto uporabe samo zadnjih dveh</string>
     <string name="title_smooth_delta_regression_window">Velikost regresijskega okna</string>
     <string name="summary_smooth_delta_regression_window">Število minut meritev, ki se uporablja za izračun zglajenega delte</string>
+    <string name="title_smooth_delta_use_exponential_decay">Uporabi eksponentno uteži z razpadom</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Da večjo utež nedavnim meritvam; starejše meritve eksponentno bledijo</string>
+    <string name="title_smooth_delta_decay_factor">Faktor razpada</string>
+    <string name="summary_smooth_delta_decay_factor">Kako hitro starejše meritve izgubijo vpliv. Nižje vrednosti se hitreje odzovejo, a so bolj hrupne</string>
 </resources>

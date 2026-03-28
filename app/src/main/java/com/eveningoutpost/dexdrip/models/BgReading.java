@@ -370,6 +370,56 @@ public class BgReading extends Model implements ShareUploadableBg {
     }
 
 
+    /**
+     * Estimate slope using exponentially-weighted least-squares regression over a time window.
+     * Recent readings receive higher weight; each step further back is multiplied by {@code lambda}.
+     *
+     * @param windowMs    how far back to look in milliseconds
+     * @param lambda      decay factor per reading interval, in (0, 1). E.g. 0.8 means each older
+     *                    reading has 80% of the weight of the next newer one.
+     * @param is_follower whether to use follower readings
+     * @return slope in mg/dL per millisecond (same unit as calculateSlope), or 0 if insufficient data
+     */
+    public static double currentSlopeByWeightedRegression(long windowMs, double lambda, boolean is_follower) {
+        final long startTime = System.currentTimeMillis() - windowMs;
+        final int maxCount = (int) (windowMs / 60000) + 5;
+        final List<BgReading> all = BgReading.latest(maxCount, is_follower);
+
+        if (all == null || all.size() < 2) return 0d;
+
+        // Keep only readings within the window; list is newest-first from latest()
+        final List<BgReading> readings = new java.util.ArrayList<>();
+        for (BgReading r : all) {
+            if (r.timestamp >= startTime) readings.add(r);
+        }
+        if (readings.size() < 2) return 0d;
+
+        // Use the newest reading's timestamp as origin to avoid floating-point precision loss.
+        // Readings are newest-first, so index 0 has weight 1.0, index 1 has weight lambda, etc.
+        final long t0 = readings.get(0).timestamp;
+        double sumW = 0, sumWX = 0, sumWY = 0, sumWXX = 0, sumWXY = 0;
+        int n = 0;
+        double weight = 1.0;
+        for (BgReading r : readings) {
+            if (r.calculated_value <= 0) { weight *= lambda; continue; }
+            final double x = (r.timestamp - t0); // ms offset, negative for older readings
+            final double y = r.calculated_value;
+            sumW   += weight;
+            sumWX  += weight * x;
+            sumWY  += weight * y;
+            sumWXX += weight * x * x;
+            sumWXY += weight * x * y;
+            n++;
+            weight *= lambda;
+        }
+        if (n < 2) return 0d;
+
+        final double denom = sumW * sumWXX - sumWX * sumWX;
+        if (denom == 0) return 0d;
+        return (sumW * sumWXY - sumWX * sumWY) / denom; // mg/dL per ms
+    }
+
+
     //*******CLASS METHODS***********//
     // Dexcom Bluetooth Share
     public static void create(EGVRecord[] egvRecords, long addativeOffset, Context context) {

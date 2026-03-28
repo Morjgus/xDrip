@@ -588,4 +588,21 @@
         <item>30</item>
     </string-array>
 
+
+    <!-- Exponential decay factor for weighted regression delta -->
+    <string-array name="smooth_delta_decay_factor_entries">
+        <item>0.6 (fast response)</item>
+        <item>0.7</item>
+        <item>0.8 (default)</item>
+        <item>0.9</item>
+        <item>0.95 (very smooth)</item>
+    </string-array>
+    <string-array name="smooth_delta_decay_factor_values">
+        <item>0.6</item>
+        <item>0.7</item>
+        <item>0.8</item>
+        <item>0.9</item>
+        <item>0.95</item>
+    </string-array>
+
 </resources>
