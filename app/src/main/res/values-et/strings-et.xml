@@ -2009,4 +2009,8 @@
     <string name="glupro_device">Seade</string>
     <string name="glupro_reconnect_attempt">Taasühendamise katse</string>
     <string name="glupro_reading_frequency">Lugemissagedus</string>
+    <string name="title_smooth_delta_by_regression">Silenda delta lineaarse regressiooni abil</string>
+    <string name="summary_smooth_delta_by_regression">Vähendab delta hüppelisust, sobitades sirge hiljutistele mõõtmistele, mitte kasutades ainult kaht viimast</string>
+    <string name="title_smooth_delta_regression_window">Regressiooniakna suurus</string>
+    <string name="summary_smooth_delta_regression_window">Mõõtmisminutite arv, mida kasutatakse silutud delta arvutamiseks</string>
 </resources>

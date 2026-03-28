@@ -9,4 +9,8 @@
     <!-- Amazfit Settings -->
     <string name="retrieve_blukon_history_summary">Retrieve missed history from Blucon device when reconnecting to sensor.</string>
     <!-- trend arrow for speak -->
+    <string name="title_smooth_delta_by_regression">Smooth delta using linear regression</string>
+    <string name="summary_smooth_delta_by_regression">Reduce delta jumpiness by fitting a line through recent readings instead of using only the last two</string>
+    <string name="title_smooth_delta_regression_window">Regression window size</string>
+    <string name="summary_smooth_delta_regression_window">Number of minutes of readings used to calculate the smoothed delta</string>
 </resources>

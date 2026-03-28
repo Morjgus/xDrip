@@ -2012,4 +2012,8 @@
     <string name="glupro_reconnect_attempt">Опит за повторно свързване</string>
     <string name="glupro_reading_frequency">Честота на четене</string>
     <string name="need_bluetooth_permission">Необходимо е разрешение за Bluetooth</string>
+    <string name="title_smooth_delta_by_regression">Изглаждане на делтата с линейна регресия</string>
+    <string name="summary_smooth_delta_by_regression">Намалява скоковете на делтата чрез напасване на права линия към последните измервания вместо само последните две</string>
+    <string name="title_smooth_delta_regression_window">Размер на прозореца за регресия</string>
+    <string name="summary_smooth_delta_regression_window">Брой минути измервания, използвани за изчисляване на изгладената делта</string>
 </resources>

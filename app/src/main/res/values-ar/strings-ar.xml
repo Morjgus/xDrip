@@ -323,4 +323,8 @@
     <string name="volume_profile_high">قيم السكر المرتفعة</string>
     <string name="glupro_disconnected">غير متصل</string>
     <string name="glupro_connected">متصل</string>
+    <string name="title_smooth_delta_by_regression">تنعيم الدلتا باستخدام الانحدار الخطي</string>
+    <string name="summary_smooth_delta_by_regression">يقلل من تقلبات الدلتا عن طريق ملاءمة خط للقراءات الأخيرة بدلاً من استخدام آخر قراءتين فقط</string>
+    <string name="title_smooth_delta_regression_window">حجم نافذة الانحدار</string>
+    <string name="summary_smooth_delta_regression_window">عدد دقائق القراءات المستخدمة لحساب الدلتا المنعّمة</string>
 </resources>

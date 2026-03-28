@@ -1549,4 +1549,8 @@
     <string name="volume_profile_high">高血糖值</string>
     <string name="glupro_disconnected">断开连接</string>
     <string name="glupro_connected">已经连接</string>
+    <string name="title_smooth_delta_by_regression">使用线性回归平滑差值</string>
+    <string name="summary_smooth_delta_by_regression">通过在最近读数中拟合一条线来减少差值跳变，而不仅使用最后两个读数</string>
+    <string name="title_smooth_delta_regression_window">回归窗口大小</string>
+    <string name="summary_smooth_delta_regression_window">用于计算平滑差值的读数分钟数</string>
 </resources>

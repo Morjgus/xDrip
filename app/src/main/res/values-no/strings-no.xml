@@ -873,4 +873,8 @@
     <string name="volume_profile_high">Høy glukoseverdier</string>
     <string name="glupro_disconnected">Frakoblet</string>
     <string name="glupro_connected">Tilkoblet</string>
+    <string name="title_smooth_delta_by_regression">Jevn ut delta med lineær regresjon</string>
+    <string name="summary_smooth_delta_by_regression">Reduserer delta-hopp ved å tilpasse en linje gjennom de siste målingene i stedet for å bruke bare de to siste</string>
+    <string name="title_smooth_delta_regression_window">Regresjonsvindustørrelse</string>
+    <string name="summary_smooth_delta_regression_window">Antall minutter med målinger brukt til å beregne den jevnede deltaen</string>
 </resources>

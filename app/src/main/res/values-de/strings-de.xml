@@ -1904,4 +1904,8 @@
     <string name="volume_profile_high">Hohe Zuckerwerte</string>
     <string name="glupro_disconnected">Getrennt</string>
     <string name="glupro_connected">Verbunden</string>
+    <string name="title_smooth_delta_by_regression">Delta mittels linearer Regression glätten</string>
+    <string name="summary_smooth_delta_by_regression">Reduziert Sprünge im Delta, indem eine Linie durch die letzten Messungen angepasst wird statt nur die letzten zwei zu verwenden</string>
+    <string name="title_smooth_delta_regression_window">Regressionsfenster</string>
+    <string name="summary_smooth_delta_regression_window">Anzahl der Minuten an Messwerten zur Berechnung des geglätteten Deltas</string>
 </resources>

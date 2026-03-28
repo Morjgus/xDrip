@@ -518,4 +518,8 @@
     <string name="volume_profile_high">Υψηλές Τιμές Γλυκόζης</string>
     <string name="glupro_disconnected">Αποσύνδεση</string>
     <string name="glupro_connected">Συνδεδεμένο</string>
+    <string name="title_smooth_delta_by_regression">Εξομάλυνση δέλτα με γραμμική παλινδρόμηση</string>
+    <string name="summary_smooth_delta_by_regression">Μειώνει τις διακυμάνσεις του δέλτα προσαρμόζοντας μια γραμμή στις πρόσφατες μετρήσεις αντί να χρησιμοποιεί μόνο τις δύο τελευταίες</string>
+    <string name="title_smooth_delta_regression_window">Μέγεθος παραθύρου παλινδρόμησης</string>
+    <string name="summary_smooth_delta_regression_window">Αριθμός λεπτών μετρήσεων για τον υπολογισμό του εξομαλυμένου δέλτα</string>
 </resources>

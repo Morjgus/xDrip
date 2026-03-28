@@ -1788,4 +1788,8 @@
     <string name="glupro_sensor_serial">Sensorin sarjanumero</string>
     <string name="glupro_device">Laite</string>
     <string name="glupro_reconnect_attempt">Yritetään yhdistää uudelleen</string>
+    <string name="title_smooth_delta_by_regression">Tasoita delta lineaarisella regressiolla</string>
+    <string name="summary_smooth_delta_by_regression">Vähentää deltan hyppimistä sovittamalla viiva viimeisimpiin mittauksiin sen sijaan, että käytettäisiin vain kahta viimeistä</string>
+    <string name="title_smooth_delta_regression_window">Regressioikkunan koko</string>
+    <string name="summary_smooth_delta_regression_window">Mittausminuuttien määrä, jota käytetään tasoitetun deltan laskemiseen</string>
 </resources>

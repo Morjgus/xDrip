@@ -1951,4 +1951,8 @@
     <string name="glupro_sensor_serial">Numer seryjny czujnika</string>
     <string name="glupro_device">Urządzenie</string>
     <string name="need_bluetooth_permission">Potrzebne uprawnienia do korzystania z Bluetooth</string>
+    <string name="title_smooth_delta_by_regression">Wygładź deltę regresją liniową</string>
+    <string name="summary_smooth_delta_by_regression">Zmniejsza skoki delty dopasowując prostą do ostatnich odczytów zamiast używać tylko dwóch ostatnich</string>
+    <string name="title_smooth_delta_regression_window">Rozmiar okna regresji</string>
+    <string name="summary_smooth_delta_regression_window">Liczba minut odczytów używanych do obliczenia wygładzonej delty</string>
 </resources>

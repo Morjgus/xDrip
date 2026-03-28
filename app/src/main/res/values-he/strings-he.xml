@@ -1761,4 +1761,8 @@
     <string name="glupro_sensor_serial">מספר סידורי של החיישן</string>
     <string name="glupro_device">מכשיר</string>
     <string name="glupro_reconnect_attempt">נסיון חיבור מחדש</string>
+    <string name="title_smooth_delta_by_regression">החלקת דלתא באמצעות רגרסיה לינארית</string>
+    <string name="summary_smooth_delta_by_regression">מפחית תנודות בדלתא על ידי התאמת קו לקריאות האחרונות במקום להשתמש רק בשתי האחרונות</string>
+    <string name="title_smooth_delta_regression_window">גודל חלון הרגרסיה</string>
+    <string name="summary_smooth_delta_regression_window">מספר דקות הקריאות המשמש לחישוב הדלתא המוחלקת</string>
 </resources>

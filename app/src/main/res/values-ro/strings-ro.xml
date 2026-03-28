@@ -1751,4 +1751,8 @@
     <string name="volume_profile_high">Valori ridicate ale glicemiei</string>
     <string name="glupro_disconnected">Deconectat</string>
     <string name="glupro_connected">Conectat</string>
+    <string name="title_smooth_delta_by_regression">Netezire delta prin regresie liniară</string>
+    <string name="summary_smooth_delta_by_regression">Reduce variabilitatea deltei prin ajustarea unei drepte la citirile recente în loc să folosească doar ultimele două</string>
+    <string name="title_smooth_delta_regression_window">Dimensiunea ferestrei de regresie</string>
+    <string name="summary_smooth_delta_regression_window">Numărul de minute de citiri folosite pentru calcularea deltei netezite</string>
 </resources>

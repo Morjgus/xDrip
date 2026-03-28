@@ -1988,4 +1988,8 @@
     <string name="glupro_configuring">Configurazione</string>
     <string name="glupro_configured">Configurato</string>
     <string name="glupro_connect_failed">Connessione fallita</string>
+    <string name="title_smooth_delta_by_regression">Uniforma il delta con regressione lineare</string>
+    <string name="summary_smooth_delta_by_regression">Riduce l\'instabilità del delta adattando una retta alle letture recenti invece di usare solo le ultime due</string>
+    <string name="title_smooth_delta_regression_window">Dimensione finestra di regressione</string>
+    <string name="summary_smooth_delta_regression_window">Numero di minuti di letture usati per calcolare il delta uniformato</string>
 </resources>

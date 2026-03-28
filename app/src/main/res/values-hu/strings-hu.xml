@@ -1909,4 +1909,8 @@
     <string name="glupro_firmware_version">Firmware-verzió</string>
     <string name="glupro_manufacturer">Gyártó</string>
     <string name="glupro_sensor_serial">Szenzor szériaszáma</string>
+    <string name="title_smooth_delta_by_regression">Delta simítása lineáris regresszióval</string>
+    <string name="summary_smooth_delta_by_regression">Csökkenti a delta ingadozásait az utóbbi mérésekre illesztett egyenes segítségével, ahelyett hogy csak az utolsó kettőt használná</string>
+    <string name="title_smooth_delta_regression_window">Regressziós ablak mérete</string>
+    <string name="summary_smooth_delta_regression_window">Az egyenletesített delta kiszámításához felhasznált mérések percben mért hossza</string>
 </resources>
