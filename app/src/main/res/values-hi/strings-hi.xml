@@ -36,6 +36,7 @@
     -->
     <string name="enable_streaming_dialog_dont_ask_again">फिर से मत पूछना</string>
     <string name="glupro_connected">जुड़ गया</string>
+    <string name="title_smooth_delta_settings">Smooth delta settings</string>
     <string name="title_smooth_delta_by_regression">रैखिक प्रतिगमन द्वारा डेल्टा को सुचारु करें</string>
     <string name="summary_smooth_delta_by_regression">केवल अंतिम दो का उपयोग करने के बजाय हाल की रीडिंग के माध्यम से एक रेखा फिट करके डेल्टा उतार-चढ़ाव को कम करता है</string>
     <string name="title_smooth_delta_regression_window">प्रतिगमन विंडो आकार</string>

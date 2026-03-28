@@ -2052,6 +2052,7 @@
     <string name="click">Clic</string>
     <string name="to_use_this_instead">pentru a folosi asta în schimb?</string>
     <string name="the_transmitter_id_you_have_entered_is_incorrect">ID-ul transmițătorului sau codul de asociere introdus este incorect și nu va funcționa.\n\nVă rugăm să verificați din nou detaliile și încercați din nou.</string>
+    <string name="title_smooth_delta_settings">Smooth delta settings</string>
     <string name="title_smooth_delta_by_regression">Netezire delta prin regresie liniară</string>
     <string name="summary_smooth_delta_by_regression">Reduce variabilitatea deltei prin ajustarea unei drepte la citirile recente în loc să folosească doar ultimele două</string>
     <string name="title_smooth_delta_regression_window">Dimensiunea ferestrei de regresie</string>

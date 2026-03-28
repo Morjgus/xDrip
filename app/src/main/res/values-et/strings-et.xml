@@ -2035,6 +2035,7 @@
     <string name="click">Klõpsa</string>
     <string name="to_use_this_instead">selle kasutamiseks?</string>
     <string name="the_transmitter_id_you_have_entered_is_incorrect">Sisestatud saatja ID või sidumiskood on ebakorrektne ja ei toimiks.\n\nKontrolli andmed üle ja proovi uuesti.</string>
+    <string name="title_smooth_delta_settings">Smooth delta settings</string>
     <string name="title_smooth_delta_by_regression">Silenda delta lineaarse regressiooni abil</string>
     <string name="summary_smooth_delta_by_regression">Vähendab delta hüppelisust, sobitades sirge hiljutistele mõõtmistele, mitte kasutades ainult kaht viimast</string>
     <string name="title_smooth_delta_regression_window">Regressiooniakna suurus</string>

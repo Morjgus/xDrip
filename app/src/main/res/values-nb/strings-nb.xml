@@ -2050,6 +2050,7 @@
     <string name="click">Klikk</string>
     <string name="to_use_this_instead">å bruke dette i stedet?</string>
     <string name="the_transmitter_id_you_have_entered_is_incorrect">Sender-ID-en eller paringskoden du har skrevet inn er feil og vil ikke fungere.\n\nDobbeltsjekk detaljene og prøv på nytt.</string>
+    <string name="title_smooth_delta_settings">Smooth delta settings</string>
     <string name="title_smooth_delta_by_regression">Jevn ut delta med lineær regresjon</string>
     <string name="summary_smooth_delta_by_regression">Reduserer delta-hopp ved å tilpasse en linje gjennom de siste målingene i stedet for å bruke bare de to siste</string>
     <string name="title_smooth_delta_regression_window">Regresjonsvindustørrelse</string>
