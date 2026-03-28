@@ -2050,6 +2050,7 @@
     <string name="to_use_this_instead">usare questo invece?</string>
     <string name="the_transmitter_id_you_have_entered_is_incorrect">L\'ID del trasmettitore o il codice di accoppiamento che hai inserito è errato e non funzionerebbe.\n\nRicontrolla i dettagli e riprova.</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Leviga il delta con regressione su una finestra temporale</string>
     <string name="title_smooth_delta_by_regression">Uniforma il delta con regressione lineare</string>
     <string name="summary_smooth_delta_by_regression">Riduce l\'instabilità del delta adattando una retta alle letture recenti invece di usare solo le ultime due</string>
     <string name="title_smooth_delta_regression_window">Dimensione finestra di regressione</string>

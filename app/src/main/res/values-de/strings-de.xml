@@ -1907,6 +1907,7 @@
     <string name="glupro_connected">Verbunden</string>
     <string name="glupro_start_time">Einschalten</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Delta glätten mittels Regression über ein Zeitfenster</string>
     <string name="title_smooth_delta_by_regression">Delta mittels linearer Regression glätten</string>
     <string name="summary_smooth_delta_by_regression">Reduziert Sprünge im Delta, indem eine Linie durch die letzten Messungen angepasst wird statt nur die letzten zwei zu verwenden</string>
     <string name="title_smooth_delta_regression_window">Regressionsfenster</string>

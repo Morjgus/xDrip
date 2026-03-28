@@ -2099,6 +2099,7 @@
     <string name="to_use_this_instead">to use this instead?</string>
     <string name="the_transmitter_id_you_have_entered_is_incorrect">The transmitter ID or pairing code you have entered is incorrect and would not work.\n\nPlease double-check the details and try again.</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Smooth delta using regression over a time window</string>
     <string name="title_smooth_delta_by_regression">Smooth delta using linear regression</string>
     <string name="summary_smooth_delta_by_regression">Reduce delta jumpiness by fitting a line through recent readings instead of using only the last two</string>
     <string name="title_smooth_delta_regression_window">Regression window size</string>

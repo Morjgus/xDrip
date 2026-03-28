@@ -2044,6 +2044,7 @@ môže spôsobovať pády alebo zamrznutia telefónu! Klepnutím otestujte predt
     <string name="to_use_this_instead">použít opravenou verzi?</string>
     <string name="the_transmitter_id_you_have_entered_is_incorrect">Zadaný identifikátor vysílače nebo párovací kód není správný a nebude fungovat.\n\nZkontrolujte prosím zadané údaje a zkuste to znovu.</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Vyhlazení delty pomocí regrese přes časové okno</string>
     <string name="title_smooth_delta_by_regression">Vyhlazení delty lineární regresí</string>
     <string name="summary_smooth_delta_by_regression">Snižuje skoky delty přizpůsobením přímky nedávným odečtům namísto použití pouze posledních dvou</string>
     <string name="title_smooth_delta_regression_window">Velikost okna regrese</string>

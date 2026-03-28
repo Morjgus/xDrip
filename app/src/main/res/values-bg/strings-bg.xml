@@ -2048,6 +2048,7 @@
     <string name="to_use_this_instead">да използвам това вместо другото?</string>
     <string name="the_transmitter_id_you_have_entered_is_incorrect">Въведеният от вас идентификатор на предавателя или код за сдвояване е неправилен и няма да работи.\n\nМоля, проверете данните и опитайте отново.</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Изглаждане на делта чрез регресия върху времеви прозорец</string>
     <string name="title_smooth_delta_by_regression">Изглаждане на делтата с линейна регресия</string>
     <string name="summary_smooth_delta_by_regression">Намалява скоковете на делтата чрез напасване на права линия към последните измервания вместо само последните две</string>
     <string name="title_smooth_delta_regression_window">Размер на прозореца за регресия</string>

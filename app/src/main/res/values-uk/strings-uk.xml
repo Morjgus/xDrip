@@ -2022,6 +2022,7 @@
     <string name="need_bluetooth_permission">Потрібен дозвіл Bluetooth</string>
     <string name="the_transmitter_id_you_have_entered_is_incorrect">Введено хибний код передавача або з\'єднання.\n\nПеревірте, будь ласка, та спробуйте вдруге.</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Згладжування дельти регресією по часовому вікну</string>
     <string name="title_smooth_delta_by_regression">Згладжування дельти лінійною регресією</string>
     <string name="summary_smooth_delta_by_regression">Зменшує стрибки дельти шляхом підгонки прямої до останніх вимірів замість використання лише двох останніх</string>
     <string name="title_smooth_delta_regression_window">Розмір вікна регресії</string>

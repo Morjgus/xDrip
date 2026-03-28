@@ -2048,6 +2048,7 @@
     <string name="to_use_this_instead">대신 이것을 사용하시겠습니까?</string>
     <string name="the_transmitter_id_you_have_entered_is_incorrect">입력하신 송신기 ID 또는 페어링 코드가 올바르지 않아 작동하지 않습니다.\n\n내용을 다시 한번 확인한 후 시도해 주세요.</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">시간 창의 회귀를 사용하여 델타 평활화</string>
     <string name="title_smooth_delta_by_regression">선형 회귀를 사용하여 델타 평활화</string>
     <string name="summary_smooth_delta_by_regression">마지막 두 값만 사용하는 대신 최근 측정값에 선을 맞추어 델타의 급격한 변화를 줄입니다</string>
     <string name="title_smooth_delta_regression_window">회귀 창 크기</string>
