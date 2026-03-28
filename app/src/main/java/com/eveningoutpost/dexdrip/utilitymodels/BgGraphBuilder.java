@@ -2364,11 +2364,18 @@ public class BgGraphBuilder {
 
         List<BgReading> last2 = BgReading.latest(2, is_follower);
         if (last2.size() < 2 || last2.get(0).timestamp - last2.get(1).timestamp > 20 * 60 * 1000) {
-            // don't show delta if there are not enough values or the values are more than 20 mintes apart
+            // don't show delta if there are not enough values or the values are more than 20 minutes apart
             return "???";
         }
 
-        double value = BgReading.currentSlope(is_follower) * 5 * 60 * 1000;
+        final double slope;
+        if (Pref.getBoolean("smooth_delta_by_regression", false)) {
+            final long windowMs = Pref.getStringToInt("smooth_delta_regression_window_minutes", 10) * 60 * 1000L;
+            slope = BgReading.currentSlopeByRegression(windowMs, is_follower);
+        } else {
+            slope = BgReading.currentSlope(is_follower);
+        }
+        final double value = slope * 5 * 60 * 1000;
 
         return unitizedDeltaStringRaw(showUnit, highGranularity, value, doMgdl);
     }
