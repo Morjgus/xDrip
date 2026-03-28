@@ -1795,6 +1795,7 @@
     <string name="glupro_disconnected">Atsieta</string>
     <string name="glupro_connected">Susieta</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Išlyginti deltą naudojant regresiją per laiko langą</string>
     <string name="title_smooth_delta_by_regression">Išlyginti deltą naudojant tiesinę regresiją</string>
     <string name="summary_smooth_delta_by_regression">Sumažina deltos šuolius pritaikant tiesę prie naujausių matavimų, o ne naudojant tik paskutinius du</string>
     <string name="title_smooth_delta_regression_window">Regresijos lango dydis</string>

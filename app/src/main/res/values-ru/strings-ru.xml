@@ -1896,6 +1896,7 @@
     <string name="glupro_disconnected">Отключено</string>
     <string name="glupro_connected">Подключено</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Сглаживание дельты регрессией по временному окну</string>
     <string name="title_smooth_delta_by_regression">Сглаживание дельты линейной регрессией</string>
     <string name="summary_smooth_delta_by_regression">Уменьшает скачки дельты путём подгонки прямой к последним измерениям вместо использования только двух последних</string>
     <string name="title_smooth_delta_regression_window">Размер окна регрессии</string>

@@ -2092,6 +2092,7 @@
     <string name="need_bluetooth_permission">Need bluetooth permission</string>
     <string name="ob1_sensor_stopped">Sensor Stopped</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Smooth delta using regression over a time window</string>
     <string name="title_smooth_delta_by_regression">Smooth delta using linear regression</string>
     <string name="summary_smooth_delta_by_regression">Reduce delta jumpiness by fitting a line through recent readings instead of using only the last two</string>
     <string name="title_smooth_delta_regression_window">Regression window size</string>

@@ -1718,6 +1718,7 @@
     <string name="glupro_disconnected">Desconectado</string>
     <string name="glupro_connected">Conectado</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Suavize o delta com regressão em uma janela de tempo</string>
     <string name="title_smooth_delta_by_regression">Suavizar delta usando regressão linear</string>
     <string name="summary_smooth_delta_by_regression">Reduz a variabilidade do delta ajustando uma reta às leituras recentes ao invés de usar apenas as duas últimas</string>
     <string name="title_smooth_delta_regression_window">Tamanho da janela de regressão</string>

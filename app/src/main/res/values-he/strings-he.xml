@@ -1762,6 +1762,7 @@
     <string name="glupro_device">מכשיר</string>
     <string name="glupro_reconnect_attempt">נסיון חיבור מחדש</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">החלקת הדלתא באמצעות רגרסיה על פני חלון זמן</string>
     <string name="title_smooth_delta_by_regression">החלקת דלתא באמצעות רגרסיה לינארית</string>
     <string name="summary_smooth_delta_by_regression">מפחית תנודות בדלתא על ידי התאמת קו לקריאות האחרונות במקום להשתמש רק בשתי האחרונות</string>
     <string name="title_smooth_delta_regression_window">גודל חלון הרגרסיה</string>

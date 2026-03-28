@@ -1835,6 +1835,7 @@
     <string name="glupro_disconnected">Bağlı değil</string>
     <string name="glupro_connected">Bağlandı</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Bir zaman penceresi üzerinden regresyon kullanarak deltayı düzeltin</string>
     <string name="title_smooth_delta_by_regression">Doğrusal regresyon kullanarak deltayı yumuşat</string>
     <string name="summary_smooth_delta_by_regression">Yalnızca son iki ölçüm yerine son ölçümlere bir doğru uydurarak delta sıçramalarını azaltır</string>
     <string name="title_smooth_delta_regression_window">Regresyon pencere boyutu</string>

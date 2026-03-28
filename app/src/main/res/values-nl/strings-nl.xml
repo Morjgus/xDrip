@@ -1687,6 +1687,7 @@
     <string name="glupro_disconnected">Verbinding verbroken</string>
     <string name="glupro_connected">Verbonden</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Delta glad maken met regressie over een tijdvenster</string>
     <string name="title_smooth_delta_by_regression">Delta gladstrijken met lineaire regressie</string>
     <string name="summary_smooth_delta_by_regression">Vermindert sprongen in de delta door een lijn door recente metingen te passen in plaats van alleen de laatste twee te gebruiken</string>
     <string name="title_smooth_delta_regression_window">Regressievenstergrootte</string>

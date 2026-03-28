@@ -1752,6 +1752,7 @@
     <string name="glupro_disconnected">Deconectat</string>
     <string name="glupro_connected">Conectat</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Nivelează delta cu regresie pe o fereastră de timp</string>
     <string name="title_smooth_delta_by_regression">Netezire delta prin regresie liniară</string>
     <string name="summary_smooth_delta_by_regression">Reduce variabilitatea deltei prin ajustarea unei drepte la citirile recente în loc să folosească doar ultimele două</string>
     <string name="title_smooth_delta_regression_window">Dimensiunea ferestrei de regresie</string>

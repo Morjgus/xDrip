@@ -110,6 +110,7 @@
     <string name="glupro_disconnected">قطع شده</string>
     <string name="glupro_connected">متصل</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">هموارسازی دلتا با استفاده از رگرسیون در یک پنجره زمانی</string>
     <string name="title_smooth_delta_by_regression">هموارسازی دلتا با رگرسیون خطی</string>
     <string name="summary_smooth_delta_by_regression">با برازش یک خط به خوانش‌های اخیر به جای استفاده از دو مورد آخر، نوسانات دلتا را کاهش می‌دهد</string>
     <string name="title_smooth_delta_regression_window">اندازه پنجره رگرسیون</string>

@@ -400,6 +400,7 @@
                 android:title="@string/title_bg_compensate_noise_ultrasensitive" />
             <PreferenceScreen
                 android:key="smooth_delta_settings"
+                android:summary="@string/summary_smooth_delta_settings"
                 android:title="@string/title_smooth_delta_settings">
                 <SwitchPreference
                     android:defaultValue="false"

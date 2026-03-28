@@ -1963,6 +1963,7 @@
     <string name="glupro_disconnected">Frakoblet</string>
     <string name="glupro_connected">Tilkoblet</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Jevn ut delta med regresjon over et tidsvindu</string>
     <string name="title_smooth_delta_by_regression">Jevn ut delta med lineær regresjon</string>
     <string name="summary_smooth_delta_by_regression">Reduserer delta-hopp ved å tilpasse en linje gjennom de siste målingene i stedet for å bruke bare de to siste</string>
     <string name="title_smooth_delta_regression_window">Regresjonsvindustørrelse</string>

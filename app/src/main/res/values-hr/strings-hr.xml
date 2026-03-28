@@ -1109,6 +1109,7 @@ CONTEXTREQUEST?</string>
     <string name="glupro_disconnected">Odspojeno</string>
     <string name="glupro_connected">Spojeno</string>
     <string name="title_smooth_delta_settings">Smooth delta settings</string>
+    <string name="summary_smooth_delta_settings">Izgladi deltu pomoću regresije kroz vremenski prozor</string>
     <string name="title_smooth_delta_by_regression">Izgladi deltu linearnom regresijom</string>
     <string name="summary_smooth_delta_by_regression">Smanjuje skokove delte prilagođavanjem pravca na nedavna očitanja umjesto korištenja samo posljednja dva</string>
     <string name="title_smooth_delta_regression_window">Veličina prozora regresije</string>
