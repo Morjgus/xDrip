@@ -325,6 +325,50 @@ public class BgReading extends Model implements ShareUploadableBg {
         }
     }
 
+    /**
+     * Estimate slope using least-squares linear regression over a time window.
+     * More stable than two-point slope when readings arrive every minute.
+     *
+     * @param windowMs    how far back to look in milliseconds (e.g. 10 * 60 * 1000 for 10 minutes)
+     * @param is_follower whether to use follower readings
+     * @return slope in mg/dL per millisecond (same unit as calculateSlope), or 0 if insufficient data
+     */
+    public static double currentSlopeByRegression(long windowMs, boolean is_follower) {
+        final long startTime = System.currentTimeMillis() - windowMs;
+        // Fetch enough readings to cover the window (assume up to 1 reading/min plus a small buffer)
+        final int maxCount = (int) (windowMs / 60000) + 5;
+        final List<BgReading> all = BgReading.latest(maxCount, is_follower);
+
+        if (all == null || all.size() < 2) return 0d;
+
+        // Keep only readings that fall within the requested window
+        final List<BgReading> readings = new java.util.ArrayList<>();
+        for (BgReading r : all) {
+            if (r.timestamp >= startTime) readings.add(r);
+        }
+        if (readings.size() < 2) return 0d;
+
+        // Use the newest reading's timestamp as origin to avoid floating-point precision loss
+        final long t0 = readings.get(0).timestamp;
+        double sumX = 0, sumY = 0, sumXX = 0, sumXY = 0;
+        int n = 0;
+        for (BgReading r : readings) {
+            if (r.calculated_value <= 0) continue;
+            final double x = (r.timestamp - t0); // ms offset, negative for older readings
+            final double y = r.calculated_value;
+            sumX  += x;
+            sumY  += y;
+            sumXX += x * x;
+            sumXY += x * y;
+            n++;
+        }
+        if (n < 2) return 0d;
+
+        final double denom = (double) n * sumXX - sumX * sumX;
+        if (denom == 0) return 0d;
+        return ((double) n * sumXY - sumX * sumY) / denom; // mg/dL per ms
+    }
+
 
     //*******CLASS METHODS***********//
     // Dexcom Bluetooth Share
