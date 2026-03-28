@@ -2023,4 +2023,8 @@
     <string name="summary_smooth_delta_by_regression">Зменшує стрибки дельти шляхом підгонки прямої до останніх вимірів замість використання лише двох останніх</string>
     <string name="title_smooth_delta_regression_window">Розмір вікна регресії</string>
     <string name="summary_smooth_delta_regression_window">Кількість хвилин вимірів, що використовуються для розрахунку згладженої дельти</string>
+    <string name="title_smooth_delta_use_exponential_decay">Використовувати експоненціальне зважування</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Надає більшу вагу останнім вимірам; старіші виміри експоненціально зникають</string>
+    <string name="title_smooth_delta_decay_factor">Коефіцієнт загасання</string>
+    <string name="summary_smooth_delta_decay_factor">Наскільки швидко старіші виміри втрачають вплив. Менші значення реагують швидше, але більш шумні</string>
 </resources>

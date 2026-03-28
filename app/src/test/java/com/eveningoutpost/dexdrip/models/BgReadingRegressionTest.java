@@ -13,6 +13,7 @@ import static com.google.common.truth.Truth.assertWithMessage;
 
 /**
  * Tests for linear-regression-based delta smoothing in {@link BgReading#currentSlopeByRegression}
+ * and exponentially-weighted regression in {@link BgReading#currentSlopeByWeightedRegression}.
  * and the preference-controlled toggle in
  * {@link BgGraphBuilder#unitizedDeltaString(boolean, boolean, boolean, boolean)}.
  */
@@ -25,6 +26,8 @@ public class BgReadingRegressionTest extends RobolectricTestWithConfig {
         new Delete().from(BgReading.class).execute();
         Pref.setBoolean("smooth_delta_by_regression", false);
         Pref.setString("smooth_delta_regression_window_minutes", "10");
+        Pref.setBoolean("smooth_delta_use_exponential_decay", false);
+        Pref.setString("smooth_delta_decay_factor", "0.8");
     }
 
     /** Creates a BgReading with the given timestamp and glucose value and persists it. */
@@ -279,5 +282,158 @@ public class BgReadingRegressionTest extends RobolectricTestWithConfig {
 
         String delta = BgGraphBuilder.unitizedDeltaString(false, false, true, true);
         assertWithMessage("readings > 20 min apart → ???").that(delta).isEqualTo("???");
+    }
+
+    // ===== currentSlopeByWeightedRegression — correctness ========================================
+
+    @Test
+    public void weightedRegressionOnPerfectLinearRise_matchesExpectedSlope() {
+        // Even with decay weighting, a perfect linear trend should return the exact slope
+        long now = System.currentTimeMillis();
+        for (int i = 9; i >= 0; i--) {
+            createReading(now - i * MINUTE_MS, 100.0 + (9 - i) * 2.0);
+        }
+
+        double slope = BgReading.currentSlopeByWeightedRegression(10 * MINUTE_MS, 0.8, true);
+        double expectedSlopePerMs = 2.0 / MINUTE_MS;
+
+        assertWithMessage("weighted regression slope on perfect linear rise")
+                .that(slope).isWithin(1e-7).of(expectedSlopePerMs);
+    }
+
+    @Test
+    public void weightedRegressionOnFlatLine_slopeIsNearZero() {
+        long now = System.currentTimeMillis();
+        for (int i = 9; i >= 0; i--) {
+            createReading(now - i * MINUTE_MS, 120.0);
+        }
+
+        double slope = BgReading.currentSlopeByWeightedRegression(10 * MINUTE_MS, 0.8, true);
+
+        assertWithMessage("weighted regression slope on flat line").that(slope).isWithin(1e-9).of(0.0);
+    }
+
+    @Test
+    public void weightedRegressionWithNoReadings_returnsZero() {
+        double slope = BgReading.currentSlopeByWeightedRegression(10 * MINUTE_MS, 0.8, true);
+        assertWithMessage("no readings → 0").that(slope).isEqualTo(0.0);
+    }
+
+    @Test
+    public void weightedRegressionWithOneReading_returnsZero() {
+        createReading(System.currentTimeMillis(), 120.0);
+        double slope = BgReading.currentSlopeByWeightedRegression(10 * MINUTE_MS, 0.8, true);
+        assertWithMessage("single reading → 0").that(slope).isEqualTo(0.0);
+    }
+
+    // ===== currentSlopeByWeightedRegression — decay behaviour ====================================
+
+    @Test
+    public void weightedRegressionRespondsMoreToRecentSpike_thanEqualWeight() {
+        // Rising trend at +1/min, then a sudden +5 spike on the newest reading.
+        // Weighted regression should be pulled more toward the spike than equal-weight regression.
+        long now = System.currentTimeMillis();
+        for (int i = 9; i >= 1; i--) {
+            createReading(now - i * MINUTE_MS, 100.0 + (9 - i)); // 100 → 108
+        }
+        createReading(now, 120.0); // spike: jumps 12 above trend
+
+        double equalSlope    = BgReading.currentSlopeByRegression(10 * MINUTE_MS, true) * MINUTE_MS;
+        double weightedSlope = BgReading.currentSlopeByWeightedRegression(10 * MINUTE_MS, 0.8, true) * MINUTE_MS;
+
+        assertWithMessage("weighted regression is more influenced by the recent spike than equal-weight")
+                .that(weightedSlope).isGreaterThan(equalSlope);
+    }
+
+    @Test
+    public void lowerDecayFactor_respondsMoreToRecentReading() {
+        // Same spike scenario; lower lambda should pull the slope even more toward the spike.
+        long now = System.currentTimeMillis();
+        for (int i = 9; i >= 1; i--) {
+            createReading(now - i * MINUTE_MS, 100.0 + (9 - i));
+        }
+        createReading(now, 120.0); // spike
+
+        double slopeLambda09 = BgReading.currentSlopeByWeightedRegression(10 * MINUTE_MS, 0.9, true);
+        double slopeLambda06 = BgReading.currentSlopeByWeightedRegression(10 * MINUTE_MS, 0.6, true);
+
+        assertWithMessage("lower lambda → stronger pull toward recent spike")
+                .that(slopeLambda06).isGreaterThan(slopeLambda09);
+    }
+
+    @Test
+    public void higherDecayFactor_closerToEqualWeightRegression() {
+        // With lambda very close to 1.0, weighted regression should approach equal-weight regression.
+        long now = System.currentTimeMillis();
+        for (int i = 9; i >= 0; i--) {
+            createReading(now - i * MINUTE_MS, 100.0 + (9 - i) * 1.5);
+        }
+
+        double equalSlope    = BgReading.currentSlopeByRegression(10 * MINUTE_MS, true);
+        double nearEqualSlope = BgReading.currentSlopeByWeightedRegression(10 * MINUTE_MS, 0.99, true);
+
+        assertWithMessage("lambda=0.99 should be very close to equal-weight regression slope")
+                .that(nearEqualSlope).isWithin(Math.abs(equalSlope) * 0.01).of(equalSlope);
+    }
+
+    // ===== unitizedDeltaString — exponential decay toggle ========================================
+
+    @Test
+    public void unitizedDeltaString_withDecayEnabled_usesWeightedRegression() {
+        // Perfect linear trend: equal-weight and weighted regression agree
+        long now = System.currentTimeMillis();
+        for (int i = 9; i >= 0; i--) {
+            createReading(now - i * MINUTE_MS, 100.0 + (9 - i));
+        }
+
+        Pref.setBoolean("smooth_delta_by_regression", true);
+        Pref.setString("smooth_delta_regression_window_minutes", "10");
+        Pref.setBoolean("smooth_delta_use_exponential_decay", true);
+        Pref.setString("smooth_delta_decay_factor", "0.8");
+
+        String delta = BgGraphBuilder.unitizedDeltaString(false, false, true, true);
+        assertWithMessage("weighted regression delta is +5 for 1 mg/dL/min trend")
+                .that(delta).isEqualTo("+5");
+    }
+
+    @Test
+    public void unitizedDeltaString_decayDisabled_usesEqualWeightRegression() {
+        long now = System.currentTimeMillis();
+        for (int i = 9; i >= 0; i--) {
+            createReading(now - i * MINUTE_MS, 100.0 + (9 - i));
+        }
+
+        Pref.setBoolean("smooth_delta_by_regression", true);
+        Pref.setString("smooth_delta_regression_window_minutes", "10");
+        Pref.setBoolean("smooth_delta_use_exponential_decay", false);
+
+        String delta = BgGraphBuilder.unitizedDeltaString(false, false, true, true);
+        assertWithMessage("equal-weight regression delta is +5 for 1 mg/dL/min trend")
+                .that(delta).isEqualTo("+5");
+    }
+
+    @Test
+    public void unitizedDeltaString_decayRespondsDifferentlyToSpike() {
+        // Spike on newest reading: decay should pull the displayed delta higher than equal-weight
+        long now = System.currentTimeMillis();
+        for (int i = 9; i >= 1; i--) {
+            createReading(now - i * MINUTE_MS, 100.0 + (9 - i));
+        }
+        createReading(now, 125.0); // sharp spike
+
+        Pref.setBoolean("smooth_delta_by_regression", true);
+        Pref.setString("smooth_delta_regression_window_minutes", "10");
+
+        Pref.setBoolean("smooth_delta_use_exponential_decay", false);
+        String equalDelta = BgGraphBuilder.unitizedDeltaString(false, true, true, true);
+
+        Pref.setBoolean("smooth_delta_use_exponential_decay", true);
+        Pref.setString("smooth_delta_decay_factor", "0.6");
+        String decayDelta = BgGraphBuilder.unitizedDeltaString(false, true, true, true);
+
+        double equalVal = Double.parseDouble(equalDelta.replace("+", ""));
+        double decayVal = Double.parseDouble(decayDelta.replace("+", ""));
+        assertWithMessage("decay-weighted delta is larger than equal-weight when newest reading spikes")
+                .that(decayVal).isGreaterThan(equalVal);
     }
 }

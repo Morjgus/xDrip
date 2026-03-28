@@ -1765,4 +1765,8 @@
     <string name="summary_smooth_delta_by_regression">מפחית תנודות בדלתא על ידי התאמת קו לקריאות האחרונות במקום להשתמש רק בשתי האחרונות</string>
     <string name="title_smooth_delta_regression_window">גודל חלון הרגרסיה</string>
     <string name="summary_smooth_delta_regression_window">מספר דקות הקריאות המשמש לחישוב הדלתא המוחלקת</string>
+    <string name="title_smooth_delta_use_exponential_decay">שימוש בשקלול דעיכה אקספוננציאלית</string>
+    <string name="summary_smooth_delta_use_exponential_decay">נותן משקל רב יותר לקריאות האחרונות; קריאות ישנות יותר דועכות באופן אקספוננציאלי</string>
+    <string name="title_smooth_delta_decay_factor">מקדם דעיכה</string>
+    <string name="summary_smooth_delta_decay_factor">עד כמה מהר קריאות ישנות יותר מאבדות השפעה. ערכים נמוכים יותר מגיבים מהר יותר אך רועשים יותר</string>
 </resources>

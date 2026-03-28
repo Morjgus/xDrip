@@ -2095,4 +2095,8 @@
     <string name="summary_smooth_delta_by_regression">Reduce delta jumpiness by fitting a line through recent readings instead of using only the last two</string>
     <string name="title_smooth_delta_regression_window">Regression window size</string>
     <string name="summary_smooth_delta_regression_window">Number of minutes of readings used to calculate the smoothed delta</string>
+    <string name="title_smooth_delta_use_exponential_decay">Use exponential decay weighting</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Give more weight to recent readings; older readings fade out exponentially</string>
+    <string name="title_smooth_delta_decay_factor">Decay factor</string>
+    <string name="summary_smooth_delta_decay_factor">How quickly older readings lose influence. Lower values respond faster but are noisier</string>
 </resources>

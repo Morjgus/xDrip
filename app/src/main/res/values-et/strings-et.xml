@@ -2013,4 +2013,8 @@
     <string name="summary_smooth_delta_by_regression">Vähendab delta hüppelisust, sobitades sirge hiljutistele mõõtmistele, mitte kasutades ainult kaht viimast</string>
     <string name="title_smooth_delta_regression_window">Regressiooniakna suurus</string>
     <string name="summary_smooth_delta_regression_window">Mõõtmisminutite arv, mida kasutatakse silutud delta arvutamiseks</string>
+    <string name="title_smooth_delta_use_exponential_decay">Kasuta eksponentsiaalset kaalumist</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Annab suurema kaalu hiljutistele mõõtmistele; vanemad mõõtmised hajuvad eksponentsiaalselt</string>
+    <string name="title_smooth_delta_decay_factor">Hajumistegur</string>
+    <string name="summary_smooth_delta_decay_factor">Kui kiiresti vanemad mõõtmised mõju kaotavad. Madalamad väärtused reageerivad kiiremini, kuid on mürarikkamad</string>
 </resources>

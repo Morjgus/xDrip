@@ -1886,4 +1886,8 @@
     <string name="summary_smooth_delta_by_regression">Minskar deltahopp genom att anpassa en linje till de senaste mätningarna istället för att bara använda de två senaste</string>
     <string name="title_smooth_delta_regression_window">Regressionsfönsterstorlek</string>
     <string name="summary_smooth_delta_regression_window">Antal minuters mätningar som används för att beräkna det utjämnade deltat</string>
+    <string name="title_smooth_delta_use_exponential_decay">Använd exponentiell avklingsviktning</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Ger mer vikt åt nyliga mätningar; äldre mätningar avtar exponentiellt</string>
+    <string name="title_smooth_delta_decay_factor">Avklingsfaktor</string>
+    <string name="summary_smooth_delta_decay_factor">Hur snabbt äldre mätningar förlorar inflytande. Lägre värden svarar snabbare men är mer brusiga</string>
 </resources>

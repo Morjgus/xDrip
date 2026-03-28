@@ -1908,4 +1908,8 @@
     <string name="summary_smooth_delta_by_regression">Reduziert Sprünge im Delta, indem eine Linie durch die letzten Messungen angepasst wird statt nur die letzten zwei zu verwenden</string>
     <string name="title_smooth_delta_regression_window">Regressionsfenster</string>
     <string name="summary_smooth_delta_regression_window">Anzahl der Minuten an Messwerten zur Berechnung des geglätteten Deltas</string>
+    <string name="title_smooth_delta_use_exponential_decay">Exponentielle Gewichtung verwenden</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Neuere Messungen erhalten mehr Gewicht; ältere Messungen klingen exponentiell ab</string>
+    <string name="title_smooth_delta_decay_factor">Abklingfaktor</string>
+    <string name="summary_smooth_delta_decay_factor">Wie schnell ältere Messungen an Einfluss verlieren. Niedrigere Werte reagieren schneller, sind aber rauschiger</string>
 </resources>

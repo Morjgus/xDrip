@@ -1690,4 +1690,8 @@
     <string name="summary_smooth_delta_by_regression">Vermindert sprongen in de delta door een lijn door recente metingen te passen in plaats van alleen de laatste twee te gebruiken</string>
     <string name="title_smooth_delta_regression_window">Regressievenstergrootte</string>
     <string name="summary_smooth_delta_regression_window">Aantal minuten aan metingen gebruikt om de vloeiende delta te berekenen</string>
+    <string name="title_smooth_delta_use_exponential_decay">Gebruik exponentieel verval weging</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Geeft meer gewicht aan recente metingen; oudere metingen vervagen exponentieel</string>
+    <string name="title_smooth_delta_decay_factor">Vervaalfactor</string>
+    <string name="summary_smooth_delta_decay_factor">Hoe snel oudere metingen invloed verliezen. Lagere waarden reageren sneller maar zijn ruisiger</string>
 </resources>

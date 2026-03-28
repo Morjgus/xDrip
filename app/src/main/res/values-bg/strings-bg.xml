@@ -2016,4 +2016,8 @@
     <string name="summary_smooth_delta_by_regression">Намалява скоковете на делтата чрез напасване на права линия към последните измервания вместо само последните две</string>
     <string name="title_smooth_delta_regression_window">Размер на прозореца за регресия</string>
     <string name="summary_smooth_delta_regression_window">Брой минути измервания, използвани за изчисляване на изгладената делта</string>
+    <string name="title_smooth_delta_use_exponential_decay">Използване на експоненциално затихване</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Дава по-голяма тежест на последните измервания; по-старите изчезват експоненциално</string>
+    <string name="title_smooth_delta_decay_factor">Коефициент на затихване</string>
+    <string name="summary_smooth_delta_decay_factor">Колко бързо губят влияние по-старите измервания. По-ниските стойности реагират по-бързо, но са по-шумни</string>
 </resources>

@@ -1035,4 +1035,8 @@
     <string name="summary_smooth_delta_by_regression">最後の2つだけを使用する代わりに、最近の読み取りに直線を当てはめることでデルタの急変を減らす</string>
     <string name="title_smooth_delta_regression_window">回帰ウィンドウサイズ</string>
     <string name="summary_smooth_delta_regression_window">平滑化されたデルタを計算するために使用する読み取りの分数</string>
+    <string name="title_smooth_delta_use_exponential_decay">指数減衰の重み付けを使用</string>
+    <string name="summary_smooth_delta_use_exponential_decay">最近の読み取りにより大きな重みを与える；古い読み取りは指数関数的に薄れる</string>
+    <string name="title_smooth_delta_decay_factor">減衰係数</string>
+    <string name="summary_smooth_delta_decay_factor">古い読み取りが影響を失う速さ。低い値はより速く反応するがノイズが多くなる</string>
 </resources>

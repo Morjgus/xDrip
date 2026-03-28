@@ -413,6 +413,22 @@
                 android:key="smooth_delta_regression_window_minutes"
                 android:summary="@string/summary_smooth_delta_regression_window"
                 android:title="@string/title_smooth_delta_regression_window" />
+            <SwitchPreference
+                android:defaultValue="false"
+                android:dependency="smooth_delta_by_regression"
+                android:key="smooth_delta_use_exponential_decay"
+                android:summary="@string/summary_smooth_delta_use_exponential_decay"
+                android:switchTextOff="@string/short_off_text_for_switches"
+                android:switchTextOn="@string/short_on_text_for_switches"
+                android:title="@string/title_smooth_delta_use_exponential_decay" />
+            <ListPreference
+                android:defaultValue="0.8"
+                android:dependency="smooth_delta_use_exponential_decay"
+                android:entries="@array/smooth_delta_decay_factor_entries"
+                android:entryValues="@array/smooth_delta_decay_factor_values"
+                android:key="smooth_delta_decay_factor"
+                android:summary="@string/summary_smooth_delta_decay_factor"
+                android:title="@string/title_smooth_delta_decay_factor" />
             <CheckBoxPreference
                 android:defaultValue="true"
                 android:key="show_showcase"

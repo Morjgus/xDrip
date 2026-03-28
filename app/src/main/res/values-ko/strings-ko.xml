@@ -2017,4 +2017,8 @@
     <string name="summary_smooth_delta_by_regression">마지막 두 값만 사용하는 대신 최근 측정값에 선을 맞추어 델타의 급격한 변화를 줄입니다</string>
     <string name="title_smooth_delta_regression_window">회귀 창 크기</string>
     <string name="summary_smooth_delta_regression_window">평활화된 델타를 계산하는 데 사용되는 측정값의 분 수</string>
+    <string name="title_smooth_delta_use_exponential_decay">지수 감쇠 가중치 사용</string>
+    <string name="summary_smooth_delta_use_exponential_decay">최근 측정값에 더 많은 가중치 부여; 오래된 측정값은 지수적으로 감소함</string>
+    <string name="title_smooth_delta_decay_factor">감쇠 계수</string>
+    <string name="summary_smooth_delta_decay_factor">오래된 측정값이 영향을 잃는 속도. 낮은 값은 더 빠르게 반응하지만 노이즈가 많음</string>
 </resources>

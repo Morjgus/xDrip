@@ -1838,4 +1838,8 @@
     <string name="summary_smooth_delta_by_regression">Yalnızca son iki ölçüm yerine son ölçümlere bir doğru uydurarak delta sıçramalarını azaltır</string>
     <string name="title_smooth_delta_regression_window">Regresyon pencere boyutu</string>
     <string name="summary_smooth_delta_regression_window">Yumuşatılmış deltayı hesaplamak için kullanılan dakika cinsinden ölçüm sayısı</string>
+    <string name="title_smooth_delta_use_exponential_decay">Üstel azalma ağırlıklandırması kullan</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Son ölçümlere daha fazla ağırlık verir; eski ölçümler üstel olarak solar</string>
+    <string name="title_smooth_delta_decay_factor">Azalma faktörü</string>
+    <string name="summary_smooth_delta_decay_factor">Eski ölçümlerin ne kadar hızlı etkisini kaybettiği. Düşük değerler daha hızlı yanıt verir ancak daha gürültülüdür</string>
 </resources>

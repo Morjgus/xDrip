@@ -1899,4 +1899,8 @@
     <string name="summary_smooth_delta_by_regression">Уменьшает скачки дельты путём подгонки прямой к последним измерениям вместо использования только двух последних</string>
     <string name="title_smooth_delta_regression_window">Размер окна регрессии</string>
     <string name="summary_smooth_delta_regression_window">Количество минут измерений, используемых для расчёта сглаженной дельты</string>
+    <string name="title_smooth_delta_use_exponential_decay">Использовать экспоненциальное взвешивание</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Придаёт больший вес последним измерениям; более старые измерения экспоненциально затухают</string>
+    <string name="title_smooth_delta_decay_factor">Коэффициент затухания</string>
+    <string name="summary_smooth_delta_decay_factor">Как быстро старые измерения теряют влияние. Меньшие значения реагируют быстрее, но более шумные</string>
 </resources>

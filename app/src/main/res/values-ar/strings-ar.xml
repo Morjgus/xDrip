@@ -327,4 +327,8 @@
     <string name="summary_smooth_delta_by_regression">يقلل من تقلبات الدلتا عن طريق ملاءمة خط للقراءات الأخيرة بدلاً من استخدام آخر قراءتين فقط</string>
     <string name="title_smooth_delta_regression_window">حجم نافذة الانحدار</string>
     <string name="summary_smooth_delta_regression_window">عدد دقائق القراءات المستخدمة لحساب الدلتا المنعّمة</string>
+    <string name="title_smooth_delta_use_exponential_decay">استخدام الترجيح الأسي</string>
+    <string name="summary_smooth_delta_use_exponential_decay">إعطاء وزن أكبر للقراءات الأخيرة؛ تتلاشى القراءات القديمة بشكل أسي</string>
+    <string name="title_smooth_delta_decay_factor">معامل الاضمحلال</string>
+    <string name="summary_smooth_delta_decay_factor">مدى سرعة فقدان القراءات الأقدم لتأثيرها. القيم المنخفضة أسرع استجابةً لكن أكثر ضوضاءً</string>
 </resources>

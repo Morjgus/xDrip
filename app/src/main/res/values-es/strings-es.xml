@@ -1929,4 +1929,8 @@
     <string name="summary_smooth_delta_by_regression">Reduce la variabilidad del delta ajustando una línea a las lecturas recientes en lugar de usar solo las dos últimas</string>
     <string name="title_smooth_delta_regression_window">Tamaño de ventana de regresión</string>
     <string name="summary_smooth_delta_regression_window">Número de minutos de lecturas utilizados para calcular el delta suavizado</string>
+    <string name="title_smooth_delta_use_exponential_decay">Usar ponderación de decaimiento exponencial</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Da más peso a las lecturas recientes; las lecturas antiguas se desvanecen exponencialmente</string>
+    <string name="title_smooth_delta_decay_factor">Factor de decaimiento</string>
+    <string name="summary_smooth_delta_decay_factor">Qué tan rápido pierden influencia las lecturas más antiguas. Los valores más bajos responden más rápido pero son más ruidosos</string>
 </resources>

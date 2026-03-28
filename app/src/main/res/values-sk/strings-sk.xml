@@ -1315,4 +1315,8 @@ Je nutné zakázať v prípade, že chcete používať xdrip cifreník. (Požado
     <string name="summary_smooth_delta_by_regression">Znižuje skoky delty prispôsobením priamky nedávnym meraniam namiesto použitia iba posledných dvoch</string>
     <string name="title_smooth_delta_regression_window">Veľkosť regresného okna</string>
     <string name="summary_smooth_delta_regression_window">Počet minút meraní použitých na výpočet vyhladzenej delty</string>
+    <string name="title_smooth_delta_use_exponential_decay">Použiť exponenciálne váhové zatuhnutie</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Prikladá väčšiu váhu nedávnym meraniam; staršie merania exponenciálne miznú</string>
+    <string name="title_smooth_delta_decay_factor">Faktor útlmu</string>
+    <string name="summary_smooth_delta_decay_factor">Ako rýchlo staršie merania strácajú vplyv. Nižšie hodnoty reagujú rýchlejšie, ale sú hlučnejšie</string>
 </resources>

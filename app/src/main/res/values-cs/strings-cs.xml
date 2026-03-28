@@ -2013,4 +2013,8 @@ môže spôsobovať pády alebo zamrznutia telefónu! Klepnutím otestujte predt
     <string name="summary_smooth_delta_by_regression">Snižuje skoky delty přizpůsobením přímky nedávným odečtům namísto použití pouze posledních dvou</string>
     <string name="title_smooth_delta_regression_window">Velikost okna regrese</string>
     <string name="summary_smooth_delta_regression_window">Počet minut odečtů použitých k výpočtu vyhlazené delty</string>
+    <string name="title_smooth_delta_use_exponential_decay">Použít exponenciální váhování</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Přidělí větší váhu nedávným odečtům; starší odečty exponenciálně blednou</string>
+    <string name="title_smooth_delta_decay_factor">Faktor útlumu</string>
+    <string name="summary_smooth_delta_decay_factor">Jak rychle starší odečty ztrácejí vliv. Nižší hodnoty reagují rychleji, ale jsou hlučnější</string>
 </resources>

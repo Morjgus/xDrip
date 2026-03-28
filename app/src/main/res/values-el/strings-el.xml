@@ -522,4 +522,8 @@
     <string name="summary_smooth_delta_by_regression">Μειώνει τις διακυμάνσεις του δέλτα προσαρμόζοντας μια γραμμή στις πρόσφατες μετρήσεις αντί να χρησιμοποιεί μόνο τις δύο τελευταίες</string>
     <string name="title_smooth_delta_regression_window">Μέγεθος παραθύρου παλινδρόμησης</string>
     <string name="summary_smooth_delta_regression_window">Αριθμός λεπτών μετρήσεων για τον υπολογισμό του εξομαλυμένου δέλτα</string>
+    <string name="title_smooth_delta_use_exponential_decay">Χρήση εκθετικής στάθμισης</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Δίνει μεγαλύτερο βάρος στις πρόσφατες μετρήσεις· οι παλαιότερες εξασθενούν εκθετικά</string>
+    <string name="title_smooth_delta_decay_factor">Παράγοντας εξασθένισης</string>
+    <string name="summary_smooth_delta_decay_factor">Πόσο γρήγορα χάνουν επιρροή οι παλαιότερες μετρήσεις. Χαμηλότερες τιμές αποκρίνονται ταχύτερα αλλά είναι πιο θορυβώδεις</string>
 </resources>

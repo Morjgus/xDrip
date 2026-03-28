@@ -1798,4 +1798,8 @@
     <string name="summary_smooth_delta_by_regression">Sumažina deltos šuolius pritaikant tiesę prie naujausių matavimų, o ne naudojant tik paskutinius du</string>
     <string name="title_smooth_delta_regression_window">Regresijos lango dydis</string>
     <string name="summary_smooth_delta_regression_window">Matavimų minučių skaičius, naudojamas išlygintai deltai apskaičiuoti</string>
+    <string name="title_smooth_delta_use_exponential_decay">Naudoti eksponentinio silpnėjimo svorį</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Suteikia didesnį svorį naujausiais matavimams; senesni matavimai eksponentiškai blėsta</string>
+    <string name="title_smooth_delta_decay_factor">Silpnėjimo koeficientas</string>
+    <string name="summary_smooth_delta_decay_factor">Kaip greitai senesni matavimai praranda įtaką. Mažesnės reikšmės reaguoja greičiau, bet yra triukšmingesnės</string>
 </resources>

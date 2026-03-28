@@ -113,4 +113,8 @@
     <string name="summary_smooth_delta_by_regression">با برازش یک خط به خوانش‌های اخیر به جای استفاده از دو مورد آخر، نوسانات دلتا را کاهش می‌دهد</string>
     <string name="title_smooth_delta_regression_window">اندازه پنجره رگرسیون</string>
     <string name="summary_smooth_delta_regression_window">تعداد دقیقه‌های خوانش‌ها که برای محاسبه دلتای هموار استفاده می‌شود</string>
+    <string name="title_smooth_delta_use_exponential_decay">استفاده از وزن‌دهی نزولی نمایی</string>
+    <string name="summary_smooth_delta_use_exponential_decay">به خوانش‌های اخیر وزن بیشتری می‌دهد؛ خوانش‌های قدیمی به صورت نمایی محو می‌شوند</string>
+    <string name="title_smooth_delta_decay_factor">ضریب نزول</string>
+    <string name="summary_smooth_delta_decay_factor">سرعت از دست دادن تأثیر خوانش‌های قدیمی‌تر. مقادیر پایین‌تر سریع‌تر پاسخ می‌دهند اما پر نویزتر هستند</string>
 </resources>

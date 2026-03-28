@@ -1112,4 +1112,8 @@ CONTEXTREQUEST?</string>
     <string name="summary_smooth_delta_by_regression">Smanjuje skokove delte prilagođavanjem pravca na nedavna očitanja umjesto korištenja samo posljednja dva</string>
     <string name="title_smooth_delta_regression_window">Veličina prozora regresije</string>
     <string name="summary_smooth_delta_regression_window">Broj minuta očitanja korištenih za izračun izglađene delte</string>
+    <string name="title_smooth_delta_use_exponential_decay">Koristiti eksponencijalno težinsko ponderiranje</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Daje veći naglasak nedavnim očitanjima; starija očitanja eksponencijalno blijede</string>
+    <string name="title_smooth_delta_decay_factor">Faktor gubitka</string>
+    <string name="summary_smooth_delta_decay_factor">Koliko brzo starija očitanja gube utjecaj. Niže vrijednosti brže reagiraju ali su bučnije</string>
 </resources>

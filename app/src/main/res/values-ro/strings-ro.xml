@@ -1755,4 +1755,8 @@
     <string name="summary_smooth_delta_by_regression">Reduce variabilitatea deltei prin ajustarea unei drepte la citirile recente în loc să folosească doar ultimele două</string>
     <string name="title_smooth_delta_regression_window">Dimensiunea ferestrei de regresie</string>
     <string name="summary_smooth_delta_regression_window">Numărul de minute de citiri folosite pentru calcularea deltei netezite</string>
+    <string name="title_smooth_delta_use_exponential_decay">Utilizare ponderare cu decădere exponențială</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Acordă mai multă importanță citirilor recente; citirile mai vechi se estompează exponențial</string>
+    <string name="title_smooth_delta_decay_factor">Factor de decădere</string>
+    <string name="summary_smooth_delta_decay_factor">Cât de repede pierd influența citirile mai vechi. Valorile mai mici răspund mai rapid dar sunt mai zgomotoase</string>
 </resources>

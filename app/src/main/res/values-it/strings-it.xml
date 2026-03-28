@@ -1992,4 +1992,8 @@
     <string name="summary_smooth_delta_by_regression">Riduce l\'instabilità del delta adattando una retta alle letture recenti invece di usare solo le ultime due</string>
     <string name="title_smooth_delta_regression_window">Dimensione finestra di regressione</string>
     <string name="summary_smooth_delta_regression_window">Numero di minuti di letture usati per calcolare il delta uniformato</string>
+    <string name="title_smooth_delta_use_exponential_decay">Usa ponderazione a decadimento esponenziale</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Dà più peso alle letture recenti; le letture più vecchie svaniscono esponenzialmente</string>
+    <string name="title_smooth_delta_decay_factor">Fattore di decadimento</string>
+    <string name="summary_smooth_delta_decay_factor">Quanto velocemente le letture più vecchie perdono influenza. Valori più bassi rispondono più velocemente ma sono più rumorosi</string>
 </resources>

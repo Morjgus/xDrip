@@ -1966,4 +1966,8 @@
     <string name="summary_smooth_delta_by_regression">Reduserer delta-hopp ved å tilpasse en linje gjennom de siste målingene i stedet for å bruke bare de to siste</string>
     <string name="title_smooth_delta_regression_window">Regresjonsvindustørrelse</string>
     <string name="summary_smooth_delta_regression_window">Antall minutter med målinger brukt til å beregne den jevnede deltaen</string>
+    <string name="title_smooth_delta_use_exponential_decay">Bruk eksponentiell vektingsavfall</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Gir mer vekt til nylige målinger; eldre målinger faller eksponentielt bort</string>
+    <string name="title_smooth_delta_decay_factor">Avfallsfaktor</string>
+    <string name="summary_smooth_delta_decay_factor">Hvor raskt eldre målinger mister innflytelse. Lavere verdier reagerer raskere men er mer støyfulle</string>
 </resources>

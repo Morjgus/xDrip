@@ -1913,4 +1913,8 @@
     <string name="summary_smooth_delta_by_regression">Csökkenti a delta ingadozásait az utóbbi mérésekre illesztett egyenes segítségével, ahelyett hogy csak az utolsó kettőt használná</string>
     <string name="title_smooth_delta_regression_window">Regressziós ablak mérete</string>
     <string name="summary_smooth_delta_regression_window">Az egyenletesített delta kiszámításához felhasznált mérések percben mért hossza</string>
+    <string name="title_smooth_delta_use_exponential_decay">Exponenciális súlyozás használata</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Nagyobb súlyt ad a közelebbi méréseknek; a régebbi mérések exponenciálisan halványulnak</string>
+    <string name="title_smooth_delta_decay_factor">Csillapítási tényező</string>
+    <string name="summary_smooth_delta_decay_factor">Milyen gyorsan veszítik el a régebbi mérések a befolyásukat. Az alacsonyabb értékek gyorsabban reagálnak, de zajosabbak</string>
 </resources>

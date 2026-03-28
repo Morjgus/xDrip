@@ -1955,4 +1955,8 @@
     <string name="summary_smooth_delta_by_regression">Zmniejsza skoki delty dopasowując prostą do ostatnich odczytów zamiast używać tylko dwóch ostatnich</string>
     <string name="title_smooth_delta_regression_window">Rozmiar okna regresji</string>
     <string name="summary_smooth_delta_regression_window">Liczba minut odczytów używanych do obliczenia wygładzonej delty</string>
+    <string name="title_smooth_delta_use_exponential_decay">Użyj wykładniczego ważenia</string>
+    <string name="summary_smooth_delta_use_exponential_decay">Nadaje większą wagę ostatnim odczytom; starsze odczyty wykładniczo zanikają</string>
+    <string name="title_smooth_delta_decay_factor">Współczynnik zaniku</string>
+    <string name="summary_smooth_delta_decay_factor">Jak szybko starsze odczyty tracą wpływ. Niższe wartości reagują szybciej, ale są głośniejsze</string>
 </resources>

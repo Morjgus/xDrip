@@ -1553,4 +1553,8 @@
     <string name="summary_smooth_delta_by_regression">通过在最近读数中拟合一条线来减少差值跳变，而不仅使用最后两个读数</string>
     <string name="title_smooth_delta_regression_window">回归窗口大小</string>
     <string name="summary_smooth_delta_regression_window">用于计算平滑差值的读数分钟数</string>
+    <string name="title_smooth_delta_use_exponential_decay">使用指数衰减加权</string>
+    <string name="summary_smooth_delta_use_exponential_decay">给予最近读数更高的权重；较旧的读数呈指数级减少</string>
+    <string name="title_smooth_delta_decay_factor">衰减因子</string>
+    <string name="summary_smooth_delta_decay_factor">较旧的读数失去影响的速度。较低的值响应更快但噪声更多</string>
 </resources>

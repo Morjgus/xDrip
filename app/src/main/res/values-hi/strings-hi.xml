@@ -40,4 +40,8 @@
     <string name="summary_smooth_delta_by_regression">केवल अंतिम दो का उपयोग करने के बजाय हाल की रीडिंग के माध्यम से एक रेखा फिट करके डेल्टा उतार-चढ़ाव को कम करता है</string>
     <string name="title_smooth_delta_regression_window">प्रतिगमन विंडो आकार</string>
     <string name="summary_smooth_delta_regression_window">सुचारु डेल्टा की गणना के लिए उपयोग की जाने वाली रीडिंग के मिनटों की संख्या</string>
+    <string name="title_smooth_delta_use_exponential_decay">घातांकीय क्षय भार का उपयोग करें</string>
+    <string name="summary_smooth_delta_use_exponential_decay">हाल की रीडिंग को अधिक भार दें; पुरानी रीडिंग घातीय रूप से फीकी पड़ती हैं</string>
+    <string name="title_smooth_delta_decay_factor">क्षय कारक</string>
+    <string name="summary_smooth_delta_decay_factor">पुरानी रीडिंग कितनी जल्दी प्रभाव खोती हैं। कम मूल्य तेजी से प्रतिक्रिया करते हैं लेकिन अधिक शोरगुल वाले होते हैं</string>
 </resources>
